@@ -1,4 +1,4 @@
-# Pollparty
+# PollParty
 
 ## Description
 
@@ -37,4 +37,4 @@ Link to your blog, twitter, etc!
 
 ## License
 
-Pollparty is MIT Licensed. See LICENSE for details.
+PollParty is MIT Licensed. See LICENSE for details.

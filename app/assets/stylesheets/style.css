@@ -56,20 +56,21 @@ div.gop input {
   padding: 0 10% 0 0;
 }
 
-/*to do: add image hover effects
-  - change input to button?
-  - find javascript solution?
-  - use text hover overlay? */
-
-/*div.dem input:hover {
-  background-image: url('democrat-color.png');
-  background: no-repeat;
+div.dem input[type=image]:hover,
+div.dem input[type=image]:active,
+div.dem input[type=image]:focus {
+  background-image: url('democrat-bg.png');
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
 }
 
-div.gop input:hover {
-  background-image: url('republican-color.png');
-  background: no-repeat;
-}*/
+div.gop input[type=image]:hover,
+div.gop input[type=image]:active,
+div.gop input[type=image]:focus {
+  background-image: url('republican-bg.png');
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+}
 
 /**********************************
 RESULTS PAGE

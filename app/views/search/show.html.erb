@@ -1,2 +1,14 @@
-<%= render 'democrat' if @party == "Democrats" %>
-<%= render 'republican' if @party == "Republicans" %>
+<% if @party == "gop" %>
+  <div class = "gop">
+<% else %>
+  <div class = "democratic">
+<% end %>
+
+
+<%= @leader %>
+<br>
+<% @standings.each do |candidate| %>
+<%= candidate.first %> => <%= candidate.last %><br>
+<% end %>
+
+</div>

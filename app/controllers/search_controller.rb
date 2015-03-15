@@ -1,11 +1,11 @@
 class SearchController < ApplicationController
 
   def index
-    # params = {"utf8"=>"✓", "commit"=>"Democrat"}
+    # params = {"utf8"=>"✓", "commit"=>"democratic"}
     if params[:commit]
       @party = params[:commit]
-      @leader = Search.leader(@party)
-      @polls = Search.polls(@party)
+      @leader = Search.new.leader(@party)
+      @standings = Search.new.standings(@party)
       render 'show'
     end
   end

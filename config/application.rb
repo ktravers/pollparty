@@ -9,6 +9,8 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
 require 'pollster'
+require 'open-uri'
+require 'json'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems

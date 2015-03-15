@@ -6,6 +6,7 @@ class SearchController < ApplicationController
       @party = params[:commit]
       @leader = Search.new.leader(@party)
       @standings = Search.new.standings(@party)
+      @url = Search.new.url(@party)
       render 'show'
     end
   end

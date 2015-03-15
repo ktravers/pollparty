@@ -1,5 +1,189 @@
-/*
-red: #EE0019;
-blue: #0D1937;
-light blue: #00aff3;
-*/
+/**********************************
+GENERAL
+***********************************/
+
+body {
+  background-color: #0D1937; /*blue*/
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 6em;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 2%;
+  color: #00aff3; /*light blue*/
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
+}
+
+#dem {
+  background-color: #0D1937; /*blue*/
+}
+
+#gop {
+  background-color: #EE0019; /*red*/
+}
+
+/**********************************
+IMAGES
+***********************************/
+
+div.dem input {
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  left: 0px;
+  display: inline-block;
+  padding: 0 0 0 10%;
+}
+
+div.gop input {
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+  right: 0px;
+  display: inline-block;
+  padding: 0 10% 0 0;
+}
+
+/*to do: add image hover effects
+  - change input to button?
+  - find javascript solution?
+  - use text hover overlay? */
+
+/*div.dem input:hover {
+  background-image: url('democrat-color.png');
+  background: no-repeat;
+}
+
+div.gop input:hover {
+  background-image: url('republican-color.png');
+  background: no-repeat;
+}*/
+
+/**********************************
+RESULTS PAGE
+***********************************/
+
+div.leader {
+  font-size: 8em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 2%;
+  color: #00aff3; /*light blue*/
+}
+
+#gop div.leader {
+  color: #0D1937; /*blue*/
+}
+
+div.external-link {
+  font-size: 1.25em;
+  text-align: center;
+  padding: 2% 0 2% 0;
+}
+
+div.standings {
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+
+div.standings th {
+  font-size: 1.75em;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 2em;
+  border-bottom: 2px solid #fff;
+}
+
+div.standings td {
+  font-size: 1.5em;
+  border-bottom: 1px dashed #D3D3D3;
+  padding: 6px 2em;
+}
+
+div.standings tbody tr:hover td {
+  color: #00aff3; /*light blue*/
+}
+
+#gop div.standings tbody tr:hover td {
+  color: #0D1937; /*blue*/
+}
+
+/**********************************
+LINKS
+***********************************/
+
+a {
+  text-decoration: none;
+}
+
+a.selected, a:hover {
+  text-decoration: underline;
+}
+
+#gop a, a:visited, a:active {
+  color: #0D1937; /*blue*/
+}
+
+#dem a, a:visited, a:active {
+  color: #00aff3; /*light blue*/
+}
+
+div.external-link {
+  text-align: center;
+  padding: 3% 0 2% 0;
+}
+
+div.internal-link {
+  border: solid #fff 2px;
+  border-radius: 10px;
+  padding: .75em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1.25em;
+  max-width: 80px;
+}
+
+div.internal-link:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+div.internal-link a:hover {
+  text-decoration: none;
+}
+
+/**********************************
+FOOTER
+***********************************/
+
+footer {
+  clear: both;
+  text-align: center;
+  width: 100%;
+  padding: 5% 0 2% 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0 .75em 0 .75em;
+  margin-left: auto;
+  margin-right: auto;
+}

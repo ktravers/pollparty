@@ -24,6 +24,10 @@ class Search
     c_hash
   end
 
+  def get_race_url(pollster_hash)
+    pollster_hash["url"]
+  end
+
   def leader(party)
     url = get_url(party)
     pollster_hash = get_json(url)
@@ -34,6 +38,12 @@ class Search
     url = get_url(party)
     pollster_hash = get_json(url)
     get_standings(pollster_hash)
+  end
+
+  def url(party)
+    url = get_url(party)
+    pollster_hash = get_json(url)
+    get_race_url(pollster_hash)
   end
 
 end

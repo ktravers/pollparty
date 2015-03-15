@@ -1,14 +1,33 @@
 <% if @party == "gop" %>
-  <div class = "gop">
+  <body id="gop">
 <% else %>
-  <div class = "democratic">
+  <body id="dem">
 <% end %>
+    <div><!-- matches up with closing </div> tag on application.html.erb layout -->
 
+    <div class="leader">
+      <%= @leader %>!<br>
+    </div>
 
-<%= @leader %>
-<br>
-<% @standings.each do |candidate| %>
-<%= candidate.first %> => <%= candidate.last %><br>
-<% end %>
-
-</div>
+    <div class="standings">
+      <table>
+        <tr>
+          <th>Candidate</th>
+          <th>Percentage</th>
+        </tr>
+        <tr>
+        <% @standings.each do |candidate| %>
+          <td><%= candidate.first %></td>
+          <td><%= candidate.last %>%</td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  
+    <div class="external-link">
+      <%= link_to "Detailed polling results", @url %>
+    </div>
+    
+    <div class="internal-link">
+      <%= link_to "Back", root_path, method: "get" %>
+    </div>

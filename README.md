@@ -1,6 +1,7 @@
 ### Who's Ahead Now?
 
-A simple web app for answering that urgent question: who's ahead in the polls right now? Results based on data from the [Huffington Post Pollster API](http://elections.huffingtonpost.com/pollster/api).
+A simple web app for answering that urgent question: who's ahead in the polls right now?   
+Results based on data from the [Huffington Post Pollster API](http://elections.huffingtonpost.com/pollster/api).
 
 #### Development/Contribution
 

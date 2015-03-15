@@ -5,7 +5,7 @@ Results based on data from the [Huffington Post Pollster API](http://elections.h
 
 #### Demo:
 
-[![Demo video](demo-ss.png "Demo video")](https://www.youtube.com/embed/klmGCsparFQ)
+[![Demo video](https://41.media.tumblr.com/e09f06fe466699ce029fe9b0dc770699/tumblr_nla1mdwnGl1qa896vo1_1280.png)](https://www.youtube.com/embed/klmGCsparFQ)
 
 #### Development/Contribution
 

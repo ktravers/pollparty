@@ -1,0 +1,16 @@
+<body>
+
+  <h1>Who's Ahead Now?</h1>
+  <h2>Choose a party:</h2>
+
+    <div class="dem">
+    <%= form_for(:search, :url => search_index_path, :method => 'GET' ) do |f| %>
+    <%= f.submit "democratic", :type => :image, :src => image_path("democrat.png") %>
+    <% end %>
+    </div>
+
+    <div class="gop">
+    <%= form_for(:search, :url => search_index_path, :method => 'GET' ) do |f| %>
+    <%= f.submit "gop", :type => :image, :src => image_path("republican.png") %>
+    <% end %>
+    </div>

@@ -137,11 +137,11 @@ a.selected, a:hover {
   text-decoration: underline;
 }
 
-#gop a, a:visited, a:active {
+#gop a, a:visited, a:active, a[href^="mailto"] {
   color: #0D1937; /*blue*/
 }
 
-#dem a, a:visited, a:active {
+#dem a, a:visited, a:active, a[href^="mailto"] {
   color: #00aff3; /*light blue*/
 }
 

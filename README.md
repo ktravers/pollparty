@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/ktravers/whos-ahead-now/badges/gpa.svg)](https://codeclimate.com/github/ktravers/whos-ahead-now)
+
 ### Who's Ahead Now?
 
 A simple web app for answering that urgent question: who's ahead in the polls right now? 

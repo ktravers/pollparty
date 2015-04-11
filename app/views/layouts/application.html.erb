@@ -8,7 +8,7 @@
     <%= csrf_meta_tags %>
     <%= analytics_init if Rails.env.production? %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.png">
+    <% favicon_link_tag 'favicon.png' %>
     <meta name="author" content="kate.travers@flatironschool.com">
     <meta name="description" content="Who's Ahead Now? We'll tell you. Click to see who's leading the polls right now.">
   </head>

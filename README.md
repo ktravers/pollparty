@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/ktravers/whos-ahead-now/badges/gpa.svg)](https://codeclimate.com/github/ktravers/whos-ahead-now)
+[![Code Climate](https://codeclimate.com/github/ktravers/whos-ahead-now/badges/gpa.svg)](https://codeclimate.com/github/ktravers/whos-ahead-now) [![Test Coverage](https://codeclimate.com/github/ktravers/whos-ahead-now/badges/coverage.svg)](https://codeclimate.com/github/ktravers/whos-ahead-now)
 
 ### Who's Ahead Now?
 

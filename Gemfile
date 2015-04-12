@@ -32,6 +32,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pollster'
 gem 'json'
 gem 'thin'
+gem "codeclimate-test-reporter", group: :test, require: nil
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -56,7 +57,6 @@ group :test, :development do
   gem 'sqlite3'
   gem 'pry'
   gem 'guard-rspec', require: false
-  gem "codeclimate-test-reporter", require: nil
 end
 
 group :production do

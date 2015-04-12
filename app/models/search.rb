@@ -1,19 +1,18 @@
 class Search
 
   BASE_URL = "http://elections.huffingtonpost.com/pollster/api"
-  # http://elections.huffingtonpost.com/pollster/2016-national-democratic-primary.json
-  # http://elections.huffingtonpost.com/pollster/2016-national-gop-primary.json
 
   def get_url(party)
     "#{BASE_URL}/charts/2016-national-#{party}-primary"
   end
+  # => "http://elections.huffingtonpost.com/pollster/api/charts/2016-national-democratic-primary"
 
   def get_json(url)
     JSON.load(open(url))
   end
 
   def get_leader(pollster_hash)
-    "#{pollster_hash["estimates"].first["choice"]}"
+    pollster_hash["estimates"].first["choice"]
   end
 
   def get_standings(pollster_hash)

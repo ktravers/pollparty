@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe SearchController do
+describe SearchController do
 
   describe 'GET show' do
     before(:all) { get :show, :commit => 'democratic' }

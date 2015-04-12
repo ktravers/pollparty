@@ -2,30 +2,70 @@ require "rails_helper"
 
 describe SearchController do
 
-  describe 'GET show' do
-    before(:all) { get :show, :commit => 'democratic' }
+  let (:search) { Search.new }
 
-    # it 'assigns @party' do 
-    #   expect(@party).to eq('democratic')
-    # end
+  describe 'GET /search' do
+    
+    it 'responds with status ok' do
+      get :show
+      expect(response.status).to eq(200)
+    end
 
-    # xit 'assigns @leader' do 
-    #   leader = Search.new.leader(@party)
-    #   expect(@leader).to eq(leader)
-    # end
+    describe "when user selects democratic donkey" do
+      before { get :show, :commit => 'democratic' }
 
-    # xit 'assigns @standings' do 
-    #   standings = Search.new.standings(@party)
-    #   expect(@standings).to eq(standings)
-    # end
+      it 'knows the party selected by the user' do 
+        expect(controller.params[:commit]).to eq('democratic')
+      end
 
-    # xit 'assigns @url' do 
-    #   url = Search.new.url(@party)
-    #   expect(@url).to eq(url)
-    # end
+      it 'sets @party to user selected party' do
+        party = controller.params[:commit]
+        expect(assigns[:party]).to eq(party)
+      end
 
-    # xit "should render 'show' page if get request includes params[:commit]" do 
-    #   expect(response).to render_template(:show)
-    # end
+      it 'sets @leader to leading candidate (as of April 2015)' do
+        # stub out get_json method so test can predict result
+        class Search
+          def get_json(arg)
+            JSON.parse( IO.read("spec/support/2016-national-democratic-primary.json"))
+          end
+        end 
+        expect(assigns[:leader]).to eq("Clinton")
+      end  
+
+      it 'sets @standings to hash of candidates and standings (as of April 2015)' do
+        # stub out get_json method so test can predict result
+        class Search
+          def get_json(arg)
+            JSON.parse( IO.read("spec/support/2016-national-democratic-primary.json"))
+          end
+        end 
+        expect(assigns[:standings]).to eq({"Clinton"=>59.7, "Biden"=>12.0, "Warren"=>12.0, "Sanders"=>5.4, "O'Malley"=>1.4, "Webb"=>1.1, "Undecided"=>8.0, "Other"=>3.3})
+      end 
+
+      it 'sets @url to Pollster url of 2016 democratic primary' do
+        # stub out get_json method so test can predict result
+        class Search
+          def get_json(arg)
+            JSON.parse( IO.read("spec/support/2016-national-democratic-primary.json"))
+          end
+        end 
+        expect(assigns[:url]).to eq("http://elections.huffingtonpost.com/pollster/2016-national-democratic-primary")
+      end 
+
+      it "renders 'show' page" do 
+        expect(response).to render_template(:show)
+      end
+
+    end
   end
+    
+  describe '#search_params' do
+    it 'cleans the params' do
+      params = ActionController::Parameters.new(search: {"commit"=>'gop', "foo"=>'bar'})
+      search_params = params.require(:search).permit(:commit)
+      expect(search_params).to eq({"commit"=>'gop'})
+    end
+  end  
+    
 end

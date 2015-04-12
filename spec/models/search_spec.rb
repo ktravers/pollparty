@@ -56,9 +56,9 @@ describe Search do
       expect(search.get_json(url).class).to satisfy{|c| type.include?(c)}
     end
 
-    it 'is the Ruby Hash version of JSON from a url' do 
-      expect(search.get_json(url)).to eq(JSON.load(open(url)))
-    end
+    # it 'is the Ruby Hash version of JSON from a url' do 
+    #   expect(search.get_json(url)).to eq(JSON.load(open(url)))
+    # end
 
   end
 

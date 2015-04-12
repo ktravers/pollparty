@@ -41,7 +41,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  # gem 'spring'
 end
 
 group :test, :development do
@@ -52,11 +52,11 @@ group :test, :development do
   gem 'binding_of_caller'
   gem 'factory_girl_rails'
   gem 'simplecov'
-  gem 'database_cleaner'
+  # gem 'database_cleaner'
   gem 'sqlite3'
   gem 'pry'
   gem 'guard-rspec', require: false
-
+  gem "codeclimate-test-reporter", require: nil
 end
 
 group :production do

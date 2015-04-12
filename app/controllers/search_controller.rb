@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
 
-  def index
+  def show
     # params = {"utf8"=>"✓", "commit"=>"democratic"}
     if params[:commit]
       @party = params[:commit]
@@ -15,5 +15,4 @@ class SearchController < ApplicationController
     def search_params
       params.require(:search).permit(:commit)
     end
-
 end

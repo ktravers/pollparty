@@ -11,7 +11,6 @@ body {
   text-decoration: none;
   padding-top: 20px;
 }
-
 h1 {
   font-size: 6em;
   text-align: center;
@@ -19,17 +18,14 @@ h1 {
   padding-bottom: 2%;
   color: #00aff3; /*light blue*/
 }
-
 h2 {
   font-size: 2em;
   text-align: center;
   margin: 0;
 }
-
 #dem {
   background-color: #0D1937; /*blue*/
 }
-
 #gop {
   background-color: #EE0019; /*red*/
 }
@@ -46,7 +42,6 @@ div.dem input {
   display: inline-block;
   padding: 0 0 0 10%;
 }
-
 div.gop input {
   margin-left: auto;
   margin-right: auto;
@@ -55,7 +50,6 @@ div.gop input {
   display: inline-block;
   padding: 0 10% 0 0;
 }
-
 div.dem input[type=image]:hover,
 div.dem input[type=image]:active,
 div.dem input[type=image]:focus {
@@ -63,7 +57,6 @@ div.dem input[type=image]:focus {
   background-position: 100% 50%;
   background-repeat: no-repeat;
 }
-
 div.gop input[type=image]:hover,
 div.gop input[type=image]:active,
 div.gop input[type=image]:focus {
@@ -84,17 +77,14 @@ div.leader {
   padding-bottom: 2%;
   color: #00aff3; /*light blue*/
 }
-
 #gop div.leader {
   color: #0D1937; /*blue*/
 }
-
 div.external-link {
   font-size: 1.25em;
   text-align: center;
   padding: 2% 0 2% 0;
 }
-
 div.standings {
   border-collapse: collapse;
   text-align: center;
@@ -102,7 +92,6 @@ div.standings {
   margin-right: auto;
   display: table;
 }
-
 div.standings th {
   font-size: 1.75em;
   font-weight: bold;
@@ -110,17 +99,14 @@ div.standings th {
   padding: 10px 2em;
   border-bottom: 2px solid #fff;
 }
-
 div.standings td {
   font-size: 1.5em;
   border-bottom: 1px dashed #D3D3D3;
   padding: 6px 2em;
 }
-
 div.standings tbody tr:hover td {
   color: #00aff3; /*light blue*/
 }
-
 #gop div.standings tbody tr:hover td {
   color: #0D1937; /*blue*/
 }
@@ -130,26 +116,22 @@ LINKS
 ***********************************/
 
 a {
+  color: #00aff3;
   text-decoration: none;
 }
-
-a.selected, a:hover {
+.selected, a:hover {
   text-decoration: underline;
 }
-
 #gop a, #gop a:visited, #gop a:active, a[href^="mailto"] {
   color: #0D1937; /*blue*/
 }
-
 #dem a, #dem a:visited, #dem a:active, a[href^="mailto"] {
   color: #00aff3; /*light blue*/
 }
-
 div.external-link {
   text-align: center;
   padding: 3% 0 2% 0;
 }
-
 div.internal-link {
   border: solid #fff 2px;
   border-radius: 10px;
@@ -160,11 +142,9 @@ div.internal-link {
   font-size: 1.25em;
   max-width: 80px;
 }
-
 div.internal-link:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
-
 div.internal-link a:hover {
   text-decoration: none;
 }
@@ -181,7 +161,6 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-
 footer li {
   display: inline-block;
   padding: 0 .75em 0 .75em;
